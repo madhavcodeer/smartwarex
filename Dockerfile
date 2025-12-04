@@ -5,12 +5,13 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install system dependencies (needed for ML libraries)
+# Install system dependencies
+# Updated: libgl1-mesa-glx -> libgl1 for Debian 12 compatibility
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
     postgresql-client \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
@@ -20,14 +21,16 @@ COPY backend/requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Install OpenCV headless if not present (prevents GUI errors)
+RUN pip install opencv-python-headless
+
 # Copy Backend Code
 COPY backend/ .
 
-# Copy ML Engine (Critical for Vision/AI features)
-# We copy this to the root so the relative imports work
+# Copy ML Engine
 COPY ml-engine/ /ml-engine
 
-# Set PYTHONPATH to ensure imports work correctly
+# Set PYTHONPATH
 ENV PYTHONPATH="${PYTHONPATH}:/ml-engine"
 
 # Expose the port
