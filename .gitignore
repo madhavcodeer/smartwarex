@@ -57,7 +57,7 @@ uploads/
 *.keras
 
 # Docker
-.dockerignore
+
 
 # Frontend specific
 frontend/dist/

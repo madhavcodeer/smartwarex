@@ -299,9 +299,11 @@ pip install -r requirements.txt
 ```
 
 ### Using Docker Compose
+Run the entire stack with a single command:
 ```bash
-docker-compose up -d
+docker-compose up --build
 ```
+For detailed instructions, see [README_DOCKER.md](README_DOCKER.md).
 
 Access the application:
 - Frontend: http://localhost:3000
