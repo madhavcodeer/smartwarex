@@ -57,6 +57,14 @@ SmartWareX is a comprehensive, enterprise-grade warehouse optimization platform 
 - Sustainability metrics dashboard
 - Compliance reporting
 
+
+### 8. **Product Vision Scanner** 👁️
+- Real-time camera-based product analysis
+- Multi-prediction classification (Hard vs. Soft)
+- Fragility assessment and handling instructions
+- Automated zone recommendations
+- Confidence calibration and agreement scoring
+
 ## 🏗️ Architecture
 
 ```
@@ -116,6 +124,7 @@ SmartWareX is a comprehensive, enterprise-grade warehouse optimization platform 
 - **Optimization**: OR-Tools (Google)
 - **Clustering**: Scikit-learn (K-Means, DBSCAN)
 - **Visualization**: Matplotlib, Seaborn, Plotly
+- **Computer Vision**: OpenCV, Pillow, MobileNetV2 (via TensorFlow/Keras)
 
 ### Database
 - **Primary DB**: PostgreSQL 14+

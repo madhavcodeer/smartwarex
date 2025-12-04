@@ -1,0 +1,1 @@
+# SmartWareX Backend Application

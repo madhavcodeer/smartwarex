@@ -11,6 +11,7 @@ import Forecasting from './pages/Forecasting';
 import RouteOptimization from './pages/Routes';
 import Suppliers from './pages/Suppliers';
 import Analytics from './pages/Analytics';
+import ProductScanner from './pages/ProductScanner';
 import './index.css';
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
                     <Route path="/routes" element={<RouteOptimization />} />
                     <Route path="/suppliers" element={<Suppliers />} />
                     <Route path="/analytics" element={<Analytics />} />
+                    <Route path="/scanner" element={<ProductScanner />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </div>

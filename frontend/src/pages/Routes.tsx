@@ -92,7 +92,7 @@ const Routes: React.FC = () => {
                             </h3>
                         </div>
                         <div className="p-4">
-                            <LoadScript googleMapsApiKey="AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                            <LoadScript googleMapsApiKey="AIzaSyBGR1dAvm3Swc3l7izJBSJRInZtSdI3H24">
                                 <GoogleMap
                                     mapContainerStyle={mapContainerStyle}
                                     center={warehouseCenter}
@@ -177,8 +177,8 @@ const Routes: React.FC = () => {
                                         key={location.id}
                                         onClick={() => calculateRoute(index)}
                                         className={`w-full p-3 rounded-lg border transition-all text-left ${selectedRoute === index
-                                                ? 'bg-blue-500/20 border-blue-500 text-white'
-                                                : 'bg-slate-800/50 border-slate-700/50 text-slate-300 hover:border-slate-600'
+                                            ? 'bg-blue-500/20 border-blue-500 text-white'
+                                            : 'bg-slate-800/50 border-slate-700/50 text-slate-300 hover:border-slate-600'
                                             }`}
                                     >
                                         <div className="flex items-center justify-between">

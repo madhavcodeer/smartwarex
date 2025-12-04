@@ -11,7 +11,8 @@ import {
     UserGroupIcon,
     PresentationChartLineIcon,
     Cog6ToothIcon,
-    ArrowLeftOnRectangleIcon
+    ArrowLeftOnRectangleIcon,
+    CameraIcon
 } from '@heroicons/react/24/outline';
 import { SparklesIcon } from '@heroicons/react/24/solid';
 
@@ -19,6 +20,7 @@ const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
     { name: 'Warehouse Layout', href: '/warehouse', icon: CubeIcon },
     { name: 'Inventory', href: '/inventory', icon: ChartBarIcon },
+    { name: 'Product Scanner', href: '/scanner', icon: CameraIcon },
     { name: 'Forecasting', href: '/forecasting', icon: PresentationChartLineIcon },
     { name: 'Routes', href: '/routes', icon: TruckIcon },
     { name: 'Suppliers', href: '/suppliers', icon: UserGroupIcon },

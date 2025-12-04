@@ -10,3 +10,5 @@ api_router.include_router(forecasting.router, prefix="/forecasting", tags=["fore
 api_router.include_router(routes.router, prefix="/routes", tags=["routes"])
 api_router.include_router(suppliers.router, prefix="/suppliers", tags=["suppliers"])
 api_router.include_router(analytics.router, prefix="/analytics", tags=["analytics"])
+from app.api.v1.endpoints import vision
+api_router.include_router(vision.router, prefix="/vision", tags=["vision"])

@@ -51,7 +51,10 @@ coverage/
 uploads/
 
 # Models
-models/
+# Models (binary files only)
+*.h5
+*.pb
+*.keras
 
 # Docker
 .dockerignore
