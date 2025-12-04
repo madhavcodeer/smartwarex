@@ -19,7 +19,8 @@ RUN apt-get update && apt-get install -y \
 COPY backend/requirements.txt .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 # Install OpenCV headless if not present (prevents GUI errors)
 RUN pip install opencv-python-headless
