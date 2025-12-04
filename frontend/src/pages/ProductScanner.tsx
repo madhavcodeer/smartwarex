@@ -4,6 +4,7 @@ import DashboardLayout from '../components/layout/DashboardLayout';
 import { CameraIcon, ArrowPathIcon, CheckCircleIcon, ExclamationTriangleIcon, PlayIcon, PauseIcon, ClockIcon, FunnelIcon } from '@heroicons/react/24/outline';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
+import { API_ENDPOINTS } from '../config/api';
 
 interface AnalysisResult {
     classification: string;
@@ -81,7 +82,7 @@ const ProductScanner: React.FC = () => {
             const formData = new FormData();
             formData.append('file', file);
 
-            const response = await axios.post('/api/v1/vision/scan', formData, {
+            const response = await axios.post(API_ENDPOINTS.visionScan, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -153,7 +154,7 @@ const ProductScanner: React.FC = () => {
             const formData = new FormData();
             formData.append('file', file);
 
-            const response = await axios.post('/api/v1/vision/scan', formData, {
+            const response = await axios.post(API_ENDPOINTS.visionScan, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
